@@ -1,0 +1,43 @@
+GOMBAO33 — JAK URUCHOMIĆ SKLEP
+================================
+
+1) ZAMÓWIENIA NA MAILA (5 minut, za darmo)
+   - Wejdź na https://formspree.io, załóż konto i kliknij "New Form".
+   - Skopiuj adres formularza (wygląda tak: https://formspree.io/f/abcdwxyz).
+   - Otwórz plik config.js i wklej go w:  orderEndpoint: 'TUTAJ'
+   - Każde zamówienie przyjdzie Ci mailem: numer, produkty, rozmiary,
+     adres / Paczkomat, telefon, e-mail klienta i kwota.
+   - Przy pierwszym zamówieniu Formspree poprosi o potwierdzenie maila.
+
+2) PŁATNOŚCI — w config.js uzupełnij:
+   - blikPhone      → numer telefonu do BLIKa
+   - bankAccount    → numer konta do przelewu
+   - bankRecipient  → imię i nazwisko odbiorcy
+   Klient po zamówieniu widzi kwotę, numer telefonu / konta i tytuł
+   (numer zamówienia). Wysyłasz paczkę, gdy zobaczysz wpłatę.
+
+3) TWOJE DANE — w config.js uzupełnij:
+   - contact.email, contact.instagram
+   - seller.name, seller.address (i NIP, jeśli masz firmę)
+   Bez tego w regulaminie zostaną żółte pola "[uzupełnij]".
+
+4) WRZUCENIE STRONY DO INTERNETU (za darmo)
+   - Wejdź na https://app.netlify.com/drop
+   - Przeciągnij CAŁY folder gombao33 na stronę.
+   - Dostaniesz link do sklepu. Własną domenę (np. gombao33.pl)
+     podepniesz potem w ustawieniach Netlify.
+
+5) ZMIANY NA CO DZIEŃ — wszystko w config.js:
+   - cena:        price: 500
+   - wyprzedany rozmiar:  sizes: { S: true, M: false, ... }  (false = przekreślony)
+   - koszt dostawy, darmowa dostawa od X zł, czas wysyłki
+   Po zmianie wrzuć folder jeszcze raz na Netlify.
+
+WAŻNE
+- Regulamin, polityka prywatności i zasady zwrotów to wzory napisane
+  pod polskie przepisy, ale nie są poradą prawną. Przy większej
+  sprzedaży daj je do sprawdzenia komuś, kto się tym zajmuje.
+- Jeśli sprzedajesz regularnie bez firmy, sprawdź zasady
+  "działalności nierejestrowanej" (limit przychodu) albo załóż firmę.
+- Płatność kartą / Przelewy24 / BLIK automatyczny wymagają konta
+  u operatora płatności (np. Stripe, Przelewy24) — można dodać później.

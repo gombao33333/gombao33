@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GOMBAO33</title>
+<meta name="description" content="GOMBAO33 — zip hoodie i t-shirt. Limitowany drop.">
+<link rel="canonical" href="https://gombao.marta-500.workers.dev/">
+<!-- link preview (iMessage, WhatsApp, Instagram, Messenger, Discord) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GOMBAO33">
+<meta property="og:title" content="GOMBAO33">
+<meta property="og:description" content="Zip hoodie i t-shirt. Limitowany drop.">
+<meta property="og:url" content="https://gombao.marta-500.workers.dev/">
+<meta property="og:image" content="https://gombao.marta-500.workers.dev/img/og-gombao33-2.jpg">
+<meta property="og:image:secure_url" content="https://gombao.marta-500.workers.dev/img/og-gombao33-2.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GOMBAO33">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GOMBAO33">
+<meta name="twitter:description" content="Zip hoodie i t-shirt. Limitowany drop.">
+<meta name="twitter:image" content="https://gombao.marta-500.workers.dev/img/og-gombao33-2.jpg">
+<meta name="theme-color" content="#1677c9">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preload" as="image" href="img/bg-clean.jpg" media="(min-aspect-ratio: 3/4)">
+<link rel="preload" as="image" href="img/bg-m-clean.jpg" media="(max-aspect-ratio: 3/4)">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#0d0f12;
+  --teal:#0e6f6a;
+  --glass:rgba(255,255,255,.9);
+  --f:Arial,"Helvetica Neue",Helvetica,sans-serif;
+  --shadow:0 2px 3px rgba(0,0,0,.45),0 0 10px rgba(0,30,70,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none}
+body{font-family:var(--f);color:var(--ink);background:#1677c9;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+/* ---------- animated scene (bg + pigeon + splats), sized exactly like background-size:cover ---------- */
+.scene{position:fixed;z-index:-1;left:50%;top:50%;width:max(100vw,177.7778vh);height:max(100vh,56.25vw);transform:translate(-50%,-50%);
+  background:#1677c9 url("img/bg-clean.jpg") 0 0/100% 100% no-repeat;pointer-events:none;overflow:hidden}
+.scene.m{display:none}
+.el{position:absolute;display:block;max-width:none;user-select:none;-webkit-user-drag:none;backface-visibility:hidden}
+/* stop-motion: every keyframe is a held pose (steps), ~6–8 poses per second */
+.pigeon{transform-origin:50% 92%;animation:peck 1.6s steps(1,end) infinite}
+@keyframes peck{
+  0%{transform:none}
+  11%{transform:rotate(-1.4deg) translateY(-.7%)}
+  22%{transform:rotate(-3.2deg) translate(1%,-.3%)}
+  33%{transform:rotate(-1.1deg) translateY(-1.1%)}
+  44%{transform:rotate(.7deg) translateY(.2%)}
+  55%{transform:rotate(-.5deg) translateY(-.5%)}
+  66%{transform:rotate(-2.6deg) translate(.8%,-.9%)}
+  77%{transform:rotate(-.8deg) translateY(-.3%)}
+  88%{transform:rotate(.5deg) translateY(.3%)}
+  100%{transform:none}}
+.chain{transform-origin:16.5% 0%;animation:swing 1.5s steps(1,end) infinite}
+.chain.m{transform-origin:11.3% 5.2%}
+@keyframes swing{
+  0%{transform:rotate(0)}12.5%{transform:rotate(1.2deg)}25%{transform:rotate(2.2deg)}37.5%{transform:rotate(1.2deg)}
+  50%{transform:rotate(0)}62.5%{transform:rotate(-1.2deg)}75%{transform:rotate(-2.2deg)}87.5%{transform:rotate(-1.2deg)}100%{transform:rotate(0)}}
+.splat{transform-origin:62% 46%;animation:boil .52s steps(1,end) infinite}
+.splat.b{animation-duration:.6s;animation-delay:-.2s}
+.splat.c{animation-duration:.46s;animation-delay:-.1s}
+@keyframes boil{
+  0%{transform:none}
+  25%{transform:rotate(1.3deg) scale(1.018)}
+  50%{transform:rotate(-.7deg) scale(.994) translate(.4%,.3%)}
+  75%{transform:rotate(.9deg) scale(1.024) translate(-.3%,.4%)}
+  100%{transform:none}}
+button{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+
+/* ---------- main stage ---------- */
+.stage{height:100vh;height:100svh;display:grid;grid-template-rows:auto minmax(0,1fr);justify-items:center;position:relative;padding:0 11.5vw;overflow:hidden}
+/* header: logo dead-centre, basket on the same horizontal axis */
+.top{width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-top:1.9vw}
+.logo{grid-column:2;display:block;width:clamp(104px,7.6vw,210px);filter:drop-shadow(0 6px 12px rgba(0,30,70,.25))}
+.logo img{width:100%;height:auto;display:block}
+.basket{grid-column:3;justify-self:end;margin-right:2.4vw;position:relative;width:clamp(50px,4.2vw,116px);background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.2vw;transition:transform .2s}
+.basket:hover{transform:translateY(-3px) rotate(-2deg)}
+.basket img{width:100%;height:auto;display:block;filter:drop-shadow(0 6px 10px rgba(0,30,70,.3))}
+.basket span{color:#fff;font:700 clamp(10px,.72vw,19px) var(--f);text-shadow:var(--shadow);letter-spacing:.01em}
+.basket .cnt{position:absolute;top:-6%;right:-14%;min-width:clamp(20px,1.3vw,32px);height:clamp(20px,1.3vw,32px);padding:0 5px;border-radius:999px;background:#fff;color:var(--teal);border:2px solid var(--teal);
+  display:grid;place-items:center;font:700 clamp(10px,.75vw,16px) var(--f);text-shadow:none;box-shadow:0 3px 8px rgba(0,0,0,.25);transform:scale(0);transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.basket .cnt.on{transform:scale(1)}
+.basket.bump{animation:bump .45s}
+@keyframes bump{30%{transform:scale(1.15) rotate(4deg)}60%{transform:scale(.95)}}
+
+.products{width:100%;min-height:0;overflow-y:auto;touch-action:pan-y;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+  display:grid;grid-template-columns:repeat(2,minmax(0,max-content));justify-content:center;align-items:end;column-gap:5.4vw;row-gap:4.5vw;
+  padding:3vw 0 5vw;scroll-behavior:auto;
+  -webkit-mask-image:linear-gradient(transparent 0,#000 4%,#000 95%,transparent 100%);mask-image:linear-gradient(transparent 0,#000 4%,#000 95%,transparent 100%)}
+.products::-webkit-scrollbar{display:none}
+.products.single{grid-template-columns:max-content}
+.prod{background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1.6vw;text-align:center}
+.prod .pic{height:min(26vw,50vh);display:flex;align-items:flex-end;justify-content:center}
+.prod img{height:100%;width:auto;display:block;transition:transform .45s cubic-bezier(.2,.8,.2,1);transform-origin:50% 80%}
+.prod:hover img,.prod:focus-visible img{transform:translateY(-1vw) scale(1.03)}
+.prod:focus-visible{outline:none}
+.prod:focus-visible .lbl{outline:3px solid #fff;outline-offset:6px;border-radius:4px}
+.lbl{color:#fff;font:700 clamp(16px,1.35vw,34px)/1.18 var(--f);text-shadow:var(--shadow);letter-spacing:-.005em;text-transform:uppercase}
+.lbl .soldout{display:block;font-size:.6em;letter-spacing:.08em;margin-top:.3em}
+
+.foot{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;padding:6px 0 20px;color:#fff;font:700 12px var(--f);text-shadow:var(--shadow);letter-spacing:.06em;text-transform:uppercase}
+.foot a{text-decoration:none;opacity:.92}
+.foot a:hover{opacity:1;text-decoration:underline}
+
+/* ---------- overlays ---------- */
+.scrim{position:fixed;inset:0;z-index:60;background:rgba(4,30,70,.42);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .25s}
+.scrim.on{opacity:1;pointer-events:auto}
+.panel{background:var(--glass);backdrop-filter:blur(24px) saturate(1.3);-webkit-backdrop-filter:blur(24px) saturate(1.3);box-shadow:0 30px 80px rgba(0,25,70,.4)}
+.x{width:42px;height:42px;border-radius:50%;border:0;background:var(--ink);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none}
+.x svg{width:14px;height:14px}
+.x:hover{background:var(--teal)}
+
+.modal{position:fixed;z-index:70;left:50%;top:50%;width:min(960px,calc(100vw - 24px));max-height:calc(100vh - 24px);max-height:calc(100svh - 24px);overflow:auto;border-radius:26px;
+  translate:-50% -46%;opacity:0;pointer-events:none;transition:opacity .25s,translate .35s cubic-bezier(.2,.8,.2,1)}
+.modal.on{opacity:1;pointer-events:auto;translate:-50% -50%}
+.modal .x{position:absolute;top:14px;right:14px;z-index:2}
+.pv{display:grid;grid-template-columns:1.1fr 1fr}
+.pv .im{background:url("img/bg-clean.jpg") 50% 40%/cover;border-radius:26px 0 0 26px;display:grid;place-items:center;padding:34px;min-height:440px}
+.pv .im img{width:100%;max-height:540px;object-fit:contain}
+.pv .in{padding:44px 34px 32px;display:flex;flex-direction:column;gap:16px}
+.pv h2{margin:0;font:900 30px/1.05 var(--f);text-transform:uppercase;letter-spacing:-.01em;padding-right:40px}
+.price{font:700 22px var(--f)}
+.pv p{margin:0;line-height:1.55;font-size:15px;color:#2a2d33}
+.pv ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.pv li{font:700 11px var(--f);text-transform:uppercase;letter-spacing:.06em;border:1.5px solid rgba(0,0,0,.18);border-radius:999px;padding:6px 10px}
+.lab{font:700 11px var(--f);letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:#444}
+.sizes{display:flex;flex-wrap:wrap;gap:8px}
+.size{min-width:56px;height:46px;border-radius:999px;border:2px solid var(--ink);background:transparent;cursor:pointer;font:700 14px var(--f)}
+.size:hover:not(:disabled){background:rgba(0,0,0,.06)}
+.size[aria-pressed="true"]{background:var(--ink);color:#fff}
+.size:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.qty{display:inline-flex;align-items:center;border:2px solid var(--ink);border-radius:999px;height:38px}
+.qty button{width:36px;height:100%;border:0;background:none;cursor:pointer;font:700 16px var(--f)}
+.qty span{min-width:22px;text-align:center;font:700 14px var(--f)}
+.warn{color:#c8102e;font:700 13px var(--f);min-height:16px}
+.btn{height:54px;border-radius:999px;border:0;background:var(--ink);color:#fff;cursor:pointer;font:700 14px var(--f);letter-spacing:.08em;text-transform:uppercase;padding:0 24px;transition:background .2s,transform .12s}
+.btn:hover{background:var(--teal)}
+.btn:active{transform:scale(.985)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn.ghost:hover{background:rgba(0,0,0,.05)}
+.btn[disabled]{opacity:.4;cursor:default}
+
+/* drawer */
+.drawer{position:fixed;z-index:70;top:10px;right:10px;bottom:10px;width:min(460px,calc(100vw - 20px));border-radius:26px;display:flex;flex-direction:column;translate:calc(100% + 20px) 0;transition:translate .4s cubic-bezier(.2,.8,.2,1)}
+.drawer.on{translate:0 0}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:22px 22px 12px}
+.dh h3{margin:0;font:900 24px var(--f);text-transform:uppercase}
+.db{flex:1;overflow:auto;padding:0 22px}
+.df{padding:16px 22px 22px;border-top:1px solid rgba(0,0,0,.08);display:flex;flex-direction:column;gap:10px}
+.line{display:grid;grid-template-columns:78px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.line .th{width:78px;height:78px;border-radius:16px;background:url("img/bg-clean.jpg") center/cover;display:grid;place-items:center;padding:6px}
+.line .th img{width:100%;height:100%;object-fit:contain}
+.line b{font:900 13px var(--f);text-transform:uppercase;display:block;margin-bottom:3px}
+.line small{font:400 13px var(--f);color:#555}
+.line .r{display:flex;flex-direction:column;align-items:flex-end;gap:8px;font:700 14px var(--f)}
+.rm{background:none;border:0;cursor:pointer;font:400 12px var(--f);text-decoration:underline;color:#666;padding:0}
+.empty{padding:60px 10px;text-align:center;color:#444;font-size:15px;line-height:1.5}
+.row{display:flex;justify-content:space-between;font-size:14px}
+.row.tot{font:900 18px var(--f)}
+
+/* checkout */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:4px 0 18px}
+.form .full{grid-column:1/-1}
+.form label.f{display:flex;flex-direction:column;gap:6px;font:700 11px var(--f);letter-spacing:.1em;text-transform:uppercase;color:#333}
+.form input[type=text],.form input[type=email],.form input[type=tel],.form textarea{font:400 16px var(--f);border:2px solid rgba(0,0,0,.14);border-radius:14px;padding:12px 14px;background:#fff;color:var(--ink);letter-spacing:0;text-transform:none;width:100%}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--ink)}
+.form .bad{border-color:#c8102e!important}
+.form textarea{min-height:64px;resize:vertical}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;align-items:center;gap:10px;border:2px solid rgba(0,0,0,.12);border-radius:14px;padding:12px 14px;cursor:pointer;font:700 14px var(--f);background:#fff}
+.opt:has(input:checked){border-color:var(--ink)}
+.opt input{accent-color:var(--ink);margin:0;width:18px;height:18px}
+.opt span{flex:1}
+.opt em{font-style:normal;font-weight:400;color:#444}
+.hint{font:400 12px var(--f);color:#555;letter-spacing:0;text-transform:none}
+.hint a{color:var(--teal)}
+.consent{display:flex;gap:10px;align-items:flex-start;font:400 13px/1.45 var(--f);color:#222}
+.consent input{margin-top:2px;width:18px;height:18px;accent-color:var(--ink);flex:none}
+.consent.bad{color:#c8102e}
+
+/* done */
+.done h4{font:900 22px var(--f);margin:6px 0 4px;text-transform:uppercase}
+.done p{font-size:15px;line-height:1.55;margin:0 0 12px}
+.paybox{background:#fff;border-radius:18px;padding:16px 18px;border:2px solid var(--ink);margin:10px 0 14px}
+.paybox .k{font:700 11px var(--f);letter-spacing:.1em;text-transform:uppercase;color:#555}
+.paybox .v{font:700 17px var(--f);margin:2px 0 10px;word-break:break-word}
+.paybox .v:last-child{margin-bottom:0}
+.cp{background:none;border:0;padding:0 0 0 6px;color:var(--teal);font:700 12px var(--f);cursor:pointer;text-decoration:underline}
+.orderbox{white-space:pre-wrap;font:400 12px/1.55 ui-monospace,Menlo,Consolas,monospace;background:#fff;border-radius:16px;padding:14px;border:1px solid rgba(0,0,0,.1);max-height:220px;overflow:auto}
+.note{background:#fff6d6;border:1.5px solid #e6c34a;border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.5;margin-bottom:12px}
+
+/* legal sheet */
+.sheet{position:fixed;z-index:80;left:50%;top:12px;bottom:12px;width:min(820px,calc(100vw - 24px));border-radius:26px;display:flex;flex-direction:column;
+  translate:-50% 30px;opacity:0;pointer-events:none;transition:opacity .25s,translate .35s cubic-bezier(.2,.8,.2,1)}
+.sheet.on{opacity:1;pointer-events:auto;translate:-50% 0}
+.sheet .dh{padding:22px 26px 12px}
+.sheet nav{display:flex;flex-wrap:wrap;gap:6px;padding:0 26px 12px;border-bottom:1px solid rgba(0,0,0,.08)}
+.sheet nav a{font:700 11px var(--f);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid rgba(0,0,0,.2);border-radius:999px;padding:7px 11px}
+.sheet nav a[aria-current="page"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.doc{flex:1;overflow:auto;padding:20px 26px 34px;font-size:15px;line-height:1.6}
+.doc h4{font:900 15px var(--f);text-transform:uppercase;margin:22px 0 6px}
+.doc h4:first-child{margin-top:0}
+.doc p,.doc li{margin:0 0 8px}
+.doc ol,.doc ul{padding-left:20px;margin:0 0 8px}
+.doc .fill{background:#fff2a8;padding:0 4px;border-radius:4px;font-weight:700}
+.doc .form-tpl{background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:14px;padding:14px 16px;white-space:pre-wrap;font-size:14px}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:22px;z-index:90;translate:-50% calc(100% + 60px);visibility:hidden;transition:translate .35s cubic-bezier(.2,.8,.2,1),visibility 0s .35s;
+  background:var(--ink);color:#fff;border-radius:999px;padding:8px 8px 8px 20px;display:flex;align-items:center;gap:14px;font:700 13px var(--f);box-shadow:0 14px 40px rgba(0,0,0,.3);max-width:calc(100vw - 24px)}
+.toast.on{translate:-50% 0;visibility:visible;transition:translate .35s cubic-bezier(.2,.8,.2,1),visibility 0s}
+.toast button{background:#fff;color:var(--ink);border:0;border-radius:999px;padding:10px 14px;cursor:pointer;font:700 12px var(--f);text-transform:uppercase;white-space:nowrap}
+
+/* ---------- phones (portrait) — follows the 1215×2160 phone mock-up ---------- */
+.foot{display:none}
+.foot-in{grid-column:1/-1;justify-self:stretch;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;padding:2.5vw 0 1vw;color:#fff;font:700 12px var(--f);text-shadow:var(--shadow);letter-spacing:.06em;text-transform:uppercase}
+.foot-in a{text-decoration:none;opacity:.92}
+.foot-in a:hover{opacity:1;text-decoration:underline}
+
+/* ---------- exact layout from the mock-ups: 1 unit = 1 px of the 3840×2160 design ---------- */
+.stage{--cw:max(100vw,177.7778vh);--ch:max(100vh,56.25vw);--u:calc(var(--cw) / 3840);--ox:calc((100vw - var(--cw)) / 2);--oy:calc((100vh - var(--ch)) / 2);--oyt:max(0px,var(--oy));
+  position:fixed;inset:0;display:block;padding:0;height:auto}
+.top{position:absolute;inset:0;display:block;padding:0;pointer-events:none;z-index:4}
+.logo{position:absolute;left:calc(var(--ox) + 1740 * var(--u));top:calc(var(--oyt) + 128 * var(--u));width:calc(350 * var(--u));margin:0;pointer-events:auto}
+.basket{position:absolute;left:min(calc(var(--ox) + 3044 * var(--u)),calc(100vw - 330 * var(--u)));top:calc(var(--oyt) + 88 * var(--u));width:calc(260 * var(--u));margin:0;gap:calc(2 * var(--u));pointer-events:auto}
+.basket span{font-size:calc(var(--kf,36) * var(--u))}
+.products{position:absolute;left:0;right:0;bottom:0;top:calc(var(--oyt) + 440 * var(--u));z-index:2;
+  display:grid;grid-template-columns:repeat(2,max-content);justify-content:start;justify-items:center;align-items:start;
+  column-gap:calc(32 * var(--u));row-gap:calc(var(--rg,170) * var(--u));
+  padding:calc(80 * var(--u)) 0 calc(160 * var(--u)) max(calc(20 * var(--u)),calc(var(--ox) + 860 * var(--u)))}
+.prod{gap:calc(var(--lg,38) * var(--u))}
+.prod .pic{height:calc(var(--ph,1080) * var(--u));width:auto;align-items:center}
+.prod img{height:calc(var(--ph,1080) * var(--s,1) * var(--u));width:auto}
+.lbl{font-size:calc(var(--lf,48) * var(--u));line-height:1.42}
+.foot-in{font-size:max(10px,calc(26 * var(--u)));padding:calc(40 * var(--u)) 0 0;width:max-content;max-width:calc(2064 * var(--u));justify-self:center}
+
+/* front/back */
+.prod .pic{position:relative}
+.prod img{object-fit:contain;max-width:calc(100% + 180 * var(--u))}
+.prod .pic.fb .back{position:absolute;left:50%;top:50%;translate:-50% -50%;opacity:0;pointer-events:none}
+@media (hover:hover){.prod:hover .pic.fb img:first-child{opacity:0}.prod:hover .pic.fb .back{opacity:1}}
+.products{grid-template-columns:calc(852 * var(--u)) calc(1180 * var(--u));justify-items:stretch}
+.prod .pic{width:100%;justify-content:center}
+.pv .im{position:relative}
+.pv .im #pImg{cursor:pointer}
+.side{position:absolute;left:50%;bottom:18px;translate:-50% 0;display:flex;gap:4px;padding:4px;border-radius:999px;background:rgba(255,255,255,.85);box-shadow:0 6px 18px rgba(0,30,70,.25)}
+.side[hidden]{display:none}
+.side button{border:0;border-radius:999px;padding:9px 18px;font:700 12px var(--f);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--ink)}
+.side button[aria-pressed="true"]{background:var(--ink);color:#fff}
+@media (max-width:820px) and (orientation:portrait), (max-aspect-ratio:3/4){
+  .scene.d{display:none}
+  .scene.m{display:block;left:0;top:0;width:100%;height:100%;transform:none;background-image:url("img/bg-m-clean.jpg")}
+  /* 1 unit = 1 px of the 1215×2160 phone design */
+  .stage{--u:calc(100vw / 1215);--ox:0px;--oy:0px;--oyt:0px;--kf:23;--ph:648;--lf:29;--lg:22;--rg:24}
+  .logo{left:calc(140 * var(--u));top:calc(64 * var(--u));width:calc(294 * var(--u))}
+  .basket{left:calc(916 * var(--u));top:calc(64 * var(--u));width:calc(168 * var(--u))}
+  .basket span{font-size:max(9px,calc(23 * var(--u)))}
+  .basket .cnt{min-width:20px;height:20px;font-size:10px;top:-10%;right:-22%}
+  .products{top:calc(210 * var(--u));grid-template-columns:1fr!important;justify-content:stretch;padding:calc(94 * var(--u)) 0 calc(120 * var(--u));
+    -webkit-mask-image:linear-gradient(transparent 0,#000 9%,#000 96%,transparent 100%);mask-image:linear-gradient(transparent 0,#000 9%,#000 96%,transparent 100%)}
+  .prod:hover img{transform:none}
+  .lbl{font-size:max(11px,calc(29 * var(--u)))}
+  .foot-in{gap:8px 16px;padding:calc(60 * var(--u)) 14vw calc(20 * var(--u));font-size:10px;margin-left:0;width:auto;justify-self:stretch}
+}
+@media (max-width:720px){
+  .pv{grid-template-columns:1fr}
+  .pv .im{border-radius:26px 26px 0 0;min-height:300px;padding:24px}
+  .pv .im img{max-height:340px}
+  .pv .in{padding:24px 20px}
+  .pv h2{font-size:24px}
+  .form{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="scene d" aria-hidden="true">
+  <img class="el chain" src="img/chain-2.webp" alt="" style="left:6.849%;top:-20.370%;width:11.849%;height:55.000%">
+  <img class="el pigeon" src="img/pigeon-2.webp" alt="" style="left:3.359%;top:57.083%;width:17.578%;height:50.602%;transform-origin:51.0% 92.0%">
+  <img class="el splat" src="img/splat.webp?v=2" alt="" style="left:77.656%;top:15.694%;width:17.448%;height:36.296%">
+</div>
+<div class="scene m" aria-hidden="true">
+  <img class="el chain m" src="img/chain-m2.webp" alt="" style="left:-15.750%;top:-14.932%;width:43.045%;height:46.204%">
+  <img class="el pigeon" src="img/pigeon-m2.webp" alt="" style="left:-26.173%;top:78.565%;width:48.560%;height:30.694%;transform-origin:67.5% 128.0%">
+  <img class="el splat b" src="img/splat-mt.webp?v=2" alt="" style="left:29.136%;top:-15.185%;width:41.975%;height:25.833%">
+  <img class="el splat c" src="img/splat-mr.webp?v=2" alt="" style="left:76.049%;top:32.222%;width:41.975%;height:25.833%">
+</div>
+
+<main class="stage">
+  <h1 class="sr">GOMBAO33</h1>
+  <header class="top">
+    <a class="logo" href="#" aria-label="GOMBAO33 — strona główna"><img src="img/logo-2.webp" alt="GOMBAO33" width="350" height="250"></a>
+    <button class="basket" id="basketBtn" aria-label="Koszyk">
+      <img src="img/basket.webp" alt="" width="260" height="270">
+      <span>KOSZYK</span>
+      <b class="cnt" id="cnt">0</b>
+    </button>
+  </header>
+
+  <section class="products" id="products" aria-label="Produkty"></section>
+
+  <nav class="foot" aria-label="Informacje">
+    <a href="#regulamin">Regulamin</a>
+    <a href="#prywatnosc">Prywatność</a>
+    <a href="#zwroty">Zwroty i reklamacje</a>
+    <a href="#dostawa">Dostawa i płatność</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</main>
+
+<div class="scrim" id="scrim"></div>
+
+<!-- PRODUCT -->
+<div class="modal panel" id="pModal" role="dialog" aria-modal="true" aria-labelledby="pTitle">
+  <button class="x" data-close aria-label="Zamknij"><svg viewBox="0 0 14 14"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="2.4"/></svg></button>
+  <div class="pv">
+    <div class="im"><img id="pImg" alt=""><div class="side" id="pSide" hidden><button type="button" data-side="f" aria-pressed="true">Przód</button><button type="button" data-side="b" aria-pressed="false">Tył</button></div></div>
+    <div class="in">
+      <h2 id="pTitle"></h2>
+      <div class="price" id="pPrice"></div>
+      <p id="pDesc"></p>
+      <ul id="pDet"></ul>
+      <div><p class="lab">Rozmiar</p><div class="sizes" id="pSizes"></div></div>
+      <div><p class="lab">Ilość</p><div class="qty"><button id="qm" aria-label="Mniej">−</button><span id="qv">1</span><button id="qp" aria-label="Więcej">+</button></div></div>
+      <div class="warn" id="pWarn" role="status"></div>
+      <button class="btn" id="addBtn">Dodaj do koszyka</button>
+    </div>
+  </div>
+</div>
+
+<!-- CART / CHECKOUT / DONE -->
+<aside class="drawer panel" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <div class="dh"><h3 id="dTitle">Koszyk</h3><button class="x" data-close aria-label="Zamknij"><svg viewBox="0 0 14 14"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="2.4"/></svg></button></div>
+  <div class="db" id="vCart"></div>
+  <form class="db" id="vCheckout" hidden novalidate></form>
+  <div class="db done" id="vDone" hidden></div>
+  <div class="df" id="dfoot"></div>
+</aside>
+
+<!-- LEGAL / INFO -->
+<section class="sheet panel" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sTitle">
+  <div class="dh"><h3 id="sTitle"></h3><a class="x" href="#" aria-label="Zamknij"><svg viewBox="0 0 14 14"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="2.4"/></svg></a></div>
+  <nav id="sNav"></nav>
+  <div class="doc" id="sDoc"></div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastTxt"></span><button id="toastBtn">Zobacz koszyk</button></div>
+
+<script src="config.js"></script>
+<script>
+(function(){
+const C = window.GOMBAO;
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const zl = v => (Math.round(v*100)/100).toLocaleString('pl-PL',{minimumFractionDigits:v%1?2:0,maximumFractionDigits:2}) + ' zł';
+const pln = v => (Math.round(v*100)/100).toLocaleString('pl-PL',{minimumFractionDigits:v%1?2:0}) + ' PLN';
+const byId = id => C.products.find(p => p.id === id);
+const fill = (v, label) => v ? esc(v) : `<span class="fill">[uzupełnij: ${label}]</span>`;
+
+/* ---------- storage (cart survives refresh) ---------- */
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem('g33cart') || '[]').filter(l => byId(l.id) && byId(l.id).sizes[l.size]); } catch(e){}
+const save = () => { try { localStorage.setItem('g33cart', JSON.stringify(cart)); } catch(e){} };
+
+/* ---------- products on the sky ---------- */
+$('#products').innerHTML = C.products.map(p => {
+  const sold = !Object.values(p.sizes).some(Boolean);
+  return `<button class="prod" data-pid="${p.id}" style="--s:${p.scale||1}">
+    <span class="pic${p.imgBack?' fb':''}"><img src="${esc(p.img)}" alt="${esc(p.name)}">${p.imgBack?`<img class="back" src="${esc(p.imgBack)}" alt="" loading="lazy">`:''}</span>
+    <span class="lbl">${esc(p.name)}<br>${pln(p.price)}${sold?'<span class="soldout">WYPRZEDANE</span>':''}</span>
+  </button>`;
+}).join('') + `<nav class="foot-in" aria-label="Informacje">${$('.foot').innerHTML}</nav>`;
+
+/* ---------- layers ---------- */
+let lastFocus = null;
+function openLayer(el, keep){ if (!$('.modal.on,.drawer.on,.sheet.on')) lastFocus = document.activeElement; if (!keep) $$('.modal.on,.drawer.on,.sheet.on').forEach(e => e!==el && e.classList.remove('on')); $('#scrim').classList.add('on'); el.classList.add('on'); document.body.style.overflow='hidden'; setTimeout(()=>{ const f = el.querySelector('.x'); f && f.focus({preventScroll:true}); }, 60); }
+function closeTop(){
+  if ($('#sheet').classList.contains('on') && $('.modal.on,.drawer.on')){
+    $('#sheet').classList.remove('on'); history.replaceState(null,'',location.pathname+location.search); return;
+  }
+  closeAll();
+}
+function closeAll(){
+  $$('.modal.on,.drawer.on,.sheet.on,#scrim').forEach(e => e.classList.remove('on')); document.body.style.overflow='';
+  if (DOCS[location.hash.slice(1)]) history.replaceState(null,'',location.pathname+location.search);
+  lastFocus && lastFocus.focus && lastFocus.focus({preventScroll:true});
+}
+
+/* ---------- product ---------- */
+let cur, size, qty;
+function setSide(k){
+  if (!cur) return; const back = k==='b' && cur.imgBack;
+  $('#pImg').src = back ? cur.imgBack : cur.img; $('#pImg').alt = cur.name + (back ? ' — tył' : ' — przód');
+  $$('#pSide button').forEach(b => b.setAttribute('aria-pressed', b.dataset.side===(back?'b':'f')));
+}
+document.addEventListener('click', e => {
+  const sd = e.target.closest('[data-side]'); if (sd){ setSide(sd.dataset.side); return; }
+  if (e.target.id==='pImg' && cur && cur.imgBack){ setSide($('#pImg').src.includes(cur.imgBack.split('/').pop()) ? 'f' : 'b'); }
+});
+function openProduct(id){
+  cur = byId(id); qty = 1;
+  const avail = Object.keys(cur.sizes).filter(s => cur.sizes[s]);
+  size = avail.length === 1 ? avail[0] : null;
+  $('#pImg').src = cur.img; $('#pImg').alt = cur.name + ' — przód';
+  $('#pSide').hidden = !cur.imgBack; setSide('f');
+  $('#pTitle').textContent = cur.name;
+  $('#pPrice').textContent = pln(cur.price);
+  $('#pDesc').textContent = cur.desc || '';
+  $('#pDet').innerHTML = (cur.details||[]).map(d => `<li>${esc(d)}</li>`).join('');
+  $('#pSizes').innerHTML = Object.keys(cur.sizes).map(s => `<button class="size" data-size="${s}" aria-pressed="${s===size}" ${cur.sizes[s]?'':'disabled aria-label="'+s+' — wyprzedane"'}>${s}</button>`).join('');
+  $('#qv').textContent = 1; $('#pWarn').textContent = '';
+  $('#addBtn').disabled = !avail.length; $('#addBtn').textContent = avail.length ? 'Dodaj do koszyka' : 'Wyprzedane';
+  openLayer($('#pModal'));
+}
+$('#qm').onclick = () => { qty = Math.max(1, qty-1); $('#qv').textContent = qty; };
+$('#qp').onclick = () => { qty = Math.min(5, qty+1); $('#qv').textContent = qty; };
+$('#addBtn').onclick = () => {
+  if (!size){ $('#pWarn').textContent = 'Wybierz rozmiar'; return; }
+  const ex = cart.find(l => l.id===cur.id && l.size===size);
+  ex ? ex.qty = Math.min(5, ex.qty + qty) : cart.push({id:cur.id, size, qty});
+  save(); render(); closeAll();
+  const b = $('#basketBtn'); b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
+  toast(`${cur.name} (${size}) w koszyku`);
+};
+
+/* ---------- cart ---------- */
+const sub = () => cart.reduce((s,l) => s + byId(l.id).price*l.qty, 0);
+const count = () => cart.reduce((s,l) => s + l.qty, 0);
+let view = 'cart', ship = C.shipping[0]?.id, lastOrder = null;
+const shipObj = () => C.shipping.find(s => s.id===ship) || C.shipping[0];
+const shipCost = () => (C.freeShippingFrom && sub() >= C.freeShippingFrom) ? 0 : (shipObj()?.price || 0);
+const payMethods = () => [
+  C.payments.blikPhone && {id:'blik', name:'BLIK na telefon'},
+  C.payments.bankAccount && {id:'przelew', name:'Przelew tradycyjny'},
+].filter(Boolean);
+
+function setView(v){ view = v; $('#vCart').hidden = v!=='cart'; $('#vCheckout').hidden = v!=='checkout'; $('#vDone').hidden = v!=='done';
+  $('#dTitle').textContent = {cart:'Koszyk', checkout:'Dostawa i dane', done:'Zamówienie'}[v]; render(); $('#vCheckout').scrollTop = 0; }
+
+function render(){
+  const n = count(); $('#cnt').textContent = n; $('#cnt').classList.toggle('on', n>0);
+  $('#basketBtn').setAttribute('aria-label', `Koszyk (${n})`);
+  const s = sub();
+  if (view==='cart'){
+    $('#vCart').innerHTML = cart.length ? cart.map((l,i) => { const p = byId(l.id); return `
+      <div class="line"><div class="th"><img src="${esc(p.img)}" alt=""></div>
+        <div><b>${esc(p.name)}</b><small>Rozmiar: ${esc(l.size)}</small></div>
+        <div class="r">${zl(p.price*l.qty)}
+          <div class="qty"><button data-dq="${i}" data-d="-1" aria-label="Mniej">−</button><span>${l.qty}</span><button data-dq="${i}" data-d="1" aria-label="Więcej">+</button></div>
+          <button class="rm" data-rm="${i}">usuń</button></div></div>`; }).join('')
+      : `<div class="empty">Koszyk jest pusty.<br>Wybierz coś z dropu.</div>`;
+    $('#dfoot').innerHTML = `
+      <div class="row"><span>Produkty</span><span>${zl(s)}</span></div>
+      ${C.freeShippingFrom ? `<div class="row"><span>Darmowa dostawa od ${zl(C.freeShippingFrom)}</span><span>${s>=C.freeShippingFrom?'✓':'brakuje '+zl(C.freeShippingFrom-s)}</span></div>`:''}
+      <div class="row tot"><span>Razem</span><span>${zl(s)}</span></div>
+      <button class="btn" data-go="checkout" ${cart.length?'':'disabled'}>Przejdź do kasy</button>`;
+  }
+  if (view==='checkout'){
+    const sh = shipCost();
+    $('#dfoot').innerHTML = `
+      <div class="row"><span>Produkty</span><span>${zl(s)}</span></div>
+      <div class="row"><span>Dostawa</span><span>${zl(sh)}</span></div>
+      <div class="row tot"><span>Do zapłaty</span><span>${zl(s+sh)}</span></div>
+      <div class="warn" id="kWarn" role="status"></div>
+      <div style="display:flex;gap:8px"><button class="btn ghost" data-go="cart" type="button">Wróć</button><button class="btn" style="flex:1" type="submit" form="vCheckout" id="orderBtn">Zamawiam z obowiązkiem zapłaty</button></div>`;
+  }
+  if (view==='done'){
+    $('#dfoot').innerHTML = `<button class="btn" data-close>Wróć do sklepu</button>`;
+  }
+}
+
+function buildCheckout(){
+  const pm = payMethods();
+  const f = $('#vCheckout');
+  const prev = Object.fromEntries(new FormData(f));
+  f.innerHTML = `<div class="form">
+    <label class="f full">Imię i nazwisko<input type="text" name="name" required autocomplete="name"></label>
+    <label class="f">E-mail<input type="email" name="email" required autocomplete="email" inputmode="email"></label>
+    <label class="f">Telefon<input type="tel" name="phone" required autocomplete="tel" inputmode="tel"></label>
+    <div class="full"><p class="lab">Dostawa</p><div class="opts">
+      ${C.shipping.map(s => `<label class="opt"><input type="radio" name="ship" value="${esc(s.id)}" ${s.id===ship?'checked':''}><span>${esc(s.name)}</span><em>${C.freeShippingFrom && sub()>=C.freeShippingFrom ? '0 zł' : zl(s.price)}</em></label>`).join('')}
+    </div></div>
+    <div class="full" id="addrBox"></div>
+    <div class="full"><p class="lab">Płatność</p><div class="opts">
+      ${pm.length ? pm.map((m,i) => `<label class="opt"><input type="radio" name="pay" value="${m.id}" ${i===0?'checked':''}><span>${m.name}</span></label>`).join('')
+        : `<div class="opt" style="cursor:default"><span>Dane do płatności wyślemy na Twój e-mail</span></div>`}
+    </div></div>
+    <label class="f full">Uwagi do zamówienia (opcjonalnie)<textarea name="note"></textarea></label>
+    <label class="consent full" id="consentBox"><input type="checkbox" name="consent" value="tak"><span>Akceptuję <a href="#regulamin">regulamin</a> i <a href="#prywatnosc">politykę prywatności</a>. Wiem, że mam ${C.returnDays} dni na zwrot bez podania przyczyny.</span></label>
+  </div>`;
+  for (const [k,v] of Object.entries(prev)) { const el = f.elements[k]; if (el && el.type!=='radio' && el.type!=='checkbox') el.value = v; }
+  buildAddr(prev);
+}
+function buildAddr(prev={}){
+  const s = shipObj();
+  $('#addrBox').innerHTML = s && s.locker
+    ? `<label class="f">Kod Paczkomatu<input type="text" name="locker" required placeholder="np. WAW01M" autocapitalize="characters"></label>
+       <p class="hint" style="margin:6px 0 0">Nie znasz kodu? <a href="https://inpost.pl/znajdz-paczkomat" target="_blank" rel="noopener">Znajdź Paczkomat na mapie InPost</a>.</p>`
+    : `<div class="form" style="padding:0"><label class="f full">Ulica i numer<input type="text" name="street" required autocomplete="street-address"></label>
+       <label class="f">Kod pocztowy<input type="text" name="zip" required autocomplete="postal-code" placeholder="00-000" inputmode="numeric"></label>
+       <label class="f">Miasto<input type="text" name="city" required autocomplete="address-level2"></label></div>`;
+  const f = $('#vCheckout'); for (const k of ['locker','street','zip','city']) if (prev[k] && f.elements[k]) f.elements[k].value = prev[k];
+}
+$('#vCheckout').addEventListener('change', e => {
+  if (e.target.name==='ship'){ const prev = Object.fromEntries(new FormData($('#vCheckout'))); ship = e.target.value; buildAddr(prev); render(); }
+  if (e.target.name==='consent') $('#consentBox').classList.remove('bad');
+});
+
+/* ---------- placing the order ---------- */
+$('#vCheckout').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, w = $('#kWarn');
+  const req = [...f.querySelectorAll('input[required]')];
+  const bad = req.filter(i => !i.value.trim()
+    || (i.type==='email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(i.value))
+    || (i.name==='phone' && i.value.replace(/\D/g,'').length < 9)
+    || (i.name==='zip' && !/^\d{2}-?\d{3}$/.test(i.value.trim())));
+  req.forEach(i => i.classList.toggle('bad', bad.includes(i)));
+  const okConsent = f.elements.consent.checked; $('#consentBox').classList.toggle('bad', !okConsent);
+  if (bad.length || !okConsent){ w.textContent = bad.length ? 'Sprawdź zaznaczone pola' : 'Zaakceptuj regulamin'; (bad[0] || f.elements.consent).focus(); return; }
+
+  const d = Object.fromEntries(new FormData(f));
+  const now = new Date(), p2 = n => String(n).padStart(2,'0');
+  const no = `G33-${String(now.getFullYear()).slice(2)}${p2(now.getMonth()+1)}${p2(now.getDate())}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;
+  const s = sub(), sh = shipCost(), total = s + sh, so = shipObj();
+  const pay = payMethods().find(m => m.id===d.pay);
+  const addr = so.locker ? `Paczkomat ${d.locker.toUpperCase()}` : `${d.street}, ${d.zip} ${d.city}`;
+  const items = cart.map(l => { const p = byId(l.id); return `${p.name} [${l.size}] × ${l.qty} = ${zl(p.price*l.qty)}`; });
+  const summary = `ZAMÓWIENIE ${no}\n\n${items.map(i => '• '+i).join('\n')}\n\nProdukty: ${zl(s)}\nDostawa: ${so.name} — ${zl(sh)}\nDO ZAPŁATY: ${zl(total)}\nPłatność: ${pay ? pay.name : 'do ustalenia'}\n\n${d.name}\n${d.email} · ${d.phone}\n${addr}${d.note ? '\nUwagi: '+d.note : ''}`;
+
+  const btn = $('#orderBtn'); btn.disabled = true; btn.textContent = 'Wysyłanie…'; w.textContent = '';
+  let sent = false;
+  if (C.orderEndpoint){
+    try {
+      const r = await fetch(C.orderEndpoint, {method:'POST', headers:{'Content-Type':'application/json', 'Accept':'application/json'},
+        body: JSON.stringify({ _subject:`Nowe zamówienie ${no} — ${zl(total)}`, _replyto:d.email, zamowienie:no, do_zaplaty:zl(total),
+          produkty:items.join(' | '), dostawa:`${so.name} (${zl(sh)})`, adres:addr, platnosc:pay ? pay.name : 'do ustalenia',
+          imie_nazwisko:d.name, email:d.email, telefon:d.phone, uwagi:d.note || '', podsumowanie:summary })});
+      sent = r.ok;
+    } catch(err){ sent = false; }
+  }
+  lastOrder = {no, total, summary, sent, pay: pay && pay.id, email:d.email};
+  if (sent){ cart = []; save(); }
+  renderDone(); setView('done');
+});
+
+function renderDone(){
+  const o = lastOrder, P = C.payments;
+  const payHtml = o.pay==='blik' ? `<div class="paybox"><div class="k">BLIK na telefon</div><div class="v">${esc(P.blikPhone)} <button class="cp" data-copy="${esc(P.blikPhone.replace(/\s/g,''))}">kopiuj</button></div>
+      <div class="k">Kwota</div><div class="v">${zl(o.total)}</div><div class="k">Tytuł</div><div class="v">${o.no} <button class="cp" data-copy="${o.no}">kopiuj</button></div></div>`
+    : o.pay==='przelew' ? `<div class="paybox"><div class="k">Numer konta</div><div class="v">${esc(P.bankAccount)} <button class="cp" data-copy="${esc(P.bankAccount.replace(/\s/g,''))}">kopiuj</button></div>
+      ${P.bankRecipient ? `<div class="k">Odbiorca</div><div class="v">${esc(P.bankRecipient)}</div>`:''}
+      <div class="k">Kwota</div><div class="v">${zl(o.total)}</div><div class="k">Tytuł przelewu</div><div class="v">${o.no} <button class="cp" data-copy="${o.no}">kopiuj</button></div></div>`
+    : `<div class="paybox"><div class="k">Do zapłaty</div><div class="v">${zl(o.total)}</div><div class="k">Numer zamówienia</div><div class="v">${o.no}</div></div>`;
+  const contact = [C.contact.email && `mailem na <b>${esc(C.contact.email)}</b>`, C.contact.instagram && `na Instagramie <b>@${esc(C.contact.instagram)}</b>`].filter(Boolean).join(' albo ');
+  $('#vDone').innerHTML = o.sent
+    ? `<h4>Dzięki!</h4><p>Zamówienie <b>${o.no}</b> przyjęte. ${o.pay ? 'Opłać je w ciągu 3 dni — wysyłamy po zaksięgowaniu wpłaty.' : 'Dane do płatności wyślemy na <b>'+esc(o.email)+'</b>.'}</p>${payHtml}
+       <p class="hint">Zrób zrzut ekranu albo zapisz numer zamówienia.</p>`
+    : `<div class="note"><b>Zamówienie nie zostało jeszcze do nas wysłane.</b> Skopiuj podsumowanie i wyślij je ${contact || 'do nas'} — potwierdzimy i podamy dane do płatności.</div>
+       <div class="orderbox" id="sumBox">${esc(o.summary)}</div>
+       <p style="margin-top:10px"><button class="btn" style="width:100%" data-copy-sum>Kopiuj zamówienie</button></p>
+       ${C.contact.instagram ? `<p><a class="btn ghost" style="display:grid;place-items:center;text-decoration:none" href="https://instagram.com/${encodeURIComponent(C.contact.instagram)}" target="_blank" rel="noopener">Otwórz Instagram</a></p>`:''}`;
+}
+
+async function copy(text, btn){
+  try { await navigator.clipboard.writeText(text); }
+  catch(e){ const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); try{ document.execCommand('copy'); }catch(_){} t.remove(); }
+  if (btn){ const o = btn.textContent; btn.textContent = 'skopiowane ✓'; setTimeout(()=>btn.textContent = o, 1600); }
+}
+
+/* ---------- info pages ---------- */
+const S = C.seller, sellerLine = `${fill(S.name,'imię i nazwisko / nazwa firmy')}, ${fill(S.address,'adres')}${S.nip?`, NIP ${esc(S.nip)}`:''}${S.regon?`, REGON ${esc(S.regon)}`:''}`;
+const mail = fill(C.contact.email,'e-mail kontaktowy');
+const DOCS = {
+  regulamin:{t:'Regulamin', h:()=>`
+    <h4>§1 Sprzedawca</h4><p>Sklep internetowy GOMBAO33 prowadzi: ${sellerLine}. Kontakt: ${mail}${C.contact.instagram?`, Instagram @${esc(C.contact.instagram)}`:''}.</p>
+    <h4>§2 Produkty i ceny</h4><p>Ceny podane w sklepie są cenami brutto w złotych polskich i nie zawierają kosztów dostawy. Koszt dostawy jest widoczny przed złożeniem zamówienia. Produkty są nowe i dostępne w ilościach limitowanych.</p>
+    <h4>§3 Składanie zamówienia</h4><ol><li>Wybierz produkt i rozmiar, dodaj go do koszyka i przejdź do kasy.</li><li>Podaj dane do wysyłki, wybierz dostawę i płatność, zaakceptuj regulamin i kliknij „Zamawiam z obowiązkiem zapłaty”.</li><li>Po złożeniu zamówienia zobaczysz jego numer i dane do płatności. Umowa sprzedaży zostaje zawarta z chwilą złożenia zamówienia.</li></ol>
+    <h4>§4 Płatność</h4><p>Dostępne metody: ${payMethods().map(m=>m.name).join(', ') || 'przelew lub BLIK — dane podajemy w potwierdzeniu zamówienia'}. Zamówienie należy opłacić w ciągu 3 dni. Nieopłacone zamówienie może zostać anulowane.</p>
+    <h4>§5 Dostawa</h4><p>Wysyłamy na terenie Polski: ${C.shipping.map(s=>`${esc(s.name)} (${zl(s.price)})`).join(', ')}. Czas wysyłki: ${esc(C.shippingDays)} od zaksięgowania wpłaty.</p>
+    <h4>§6 Odstąpienie od umowy</h4><p>Konsument (oraz przedsiębiorca na prawach konsumenta) może odstąpić od umowy w terminie ${C.returnDays} dni od otrzymania towaru bez podawania przyczyny. Szczegóły i wzór oświadczenia: <a href="#zwroty">Zwroty i reklamacje</a>. Zwracamy płatność wraz z najtańszym oferowanym kosztem dostawy w ciągu 14 dni od otrzymania oświadczenia; możemy wstrzymać zwrot do czasu otrzymania towaru. Koszt odesłania towaru ponosi kupujący.</p>
+    <h4>§7 Reklamacje</h4><p>Odpowiadamy za zgodność towaru z umową na zasadach ustawy o prawach konsumenta. Reklamację wyślij na ${mail} z numerem zamówienia i opisem problemu. Odpowiemy w ciągu 14 dni.</p>
+    <h4>§8 Dane osobowe</h4><p>Zasady przetwarzania danych opisuje <a href="#prywatnosc">polityka prywatności</a>.</p>
+    <h4>§9 Postanowienia końcowe</h4><p>W sprawach nieuregulowanych stosuje się przepisy prawa polskiego, w tym Kodeksu cywilnego i ustawy o prawach konsumenta. Konsument może skorzystać z pozasądowych sposobów rozwiązywania sporów, np. pomocy miejskiego lub powiatowego rzecznika konsumentów.</p>`},
+  prywatnosc:{t:'Polityka prywatności', h:()=>`
+    <h4>Administrator</h4><p>Administratorem Twoich danych jest ${sellerLine}. Kontakt: ${mail}.</p>
+    <h4>Jakie dane i po co</h4><ul><li>Imię i nazwisko, e-mail, telefon, adres lub kod Paczkomatu — żeby zrealizować zamówienie i dostawę (art. 6 ust. 1 lit. b RODO).</li><li>Dane z zamówień i płatności — żeby spełnić obowiązki księgowe i podatkowe (art. 6 ust. 1 lit. c RODO).</li><li>Korespondencja — żeby obsłużyć zwroty, reklamacje i ewentualne roszczenia (art. 6 ust. 1 lit. f RODO).</li></ul>
+    <h4>Komu przekazujemy dane</h4><p>Firmie kurierskiej lub InPost (dostawa), dostawcy hostingu strony, dostawcy usługi formularza, przez który trafiają do nas zamówienia, oraz biuru rachunkowemu — tylko w zakresie potrzebnym do ich zadań.</p>
+    <h4>Jak długo</h4><p>Przez czas realizacji zamówienia, a potem tak długo, jak wymagają tego przepisy podatkowe (zwykle 5 lat) lub do przedawnienia roszczeń.</p>
+    <h4>Twoje prawa</h4><p>Masz prawo do dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przeniesienia oraz sprzeciwu. Możesz złożyć skargę do Prezesa UODO. Podanie danych jest dobrowolne, ale bez nich nie zrealizujemy zamówienia.</p>
+    <h4>Pliki cookies</h4><p>Strona nie używa cookies śledzących ani reklamowych. Zawartość koszyka zapisuje się tylko w pamięci Twojej przeglądarki (localStorage), żeby nie znikała po odświeżeniu.</p>`},
+  zwroty:{t:'Zwroty i reklamacje', h:()=>`
+    <h4>Zwrot bez podania przyczyny</h4><ol><li>Masz <b>${C.returnDays} dni</b> od otrzymania paczki, żeby odstąpić od umowy.</li><li>Napisz na ${mail} z numerem zamówienia (wystarczy wiadomość — możesz użyć wzoru poniżej).</li><li>Odeślij rzeczy w ciągu 14 dni od wysłania oświadczenia na adres: ${fill(S.address,'adres do zwrotów')}.</li><li>Pieniądze oddamy w ciągu 14 dni na Twoje konto.</li></ol>
+    <p>Rzeczy muszą być nienoszone poza przymierzeniem, bez zapachów i zabrudzeń. Odpowiadasz za zmniejszenie wartości towaru wynikające z używania go w sposób wykraczający poza sprawdzenie jego charakteru, cech i funkcjonowania.</p>
+    <h4>Reklamacja</h4><p>Jeśli coś jest nie tak z produktem, napisz na ${mail}: numer zamówienia, opis problemu, zdjęcia i czego oczekujesz (naprawa, wymiana, obniżka ceny lub zwrot pieniędzy). Odpowiemy w ciągu 14 dni.</p>
+    <h4>Wzór formularza odstąpienia od umowy</h4><div class="form-tpl">Adresat: ${S.name?esc(S.name):'[sprzedawca]'}, ${S.address?esc(S.address):'[adres]'}, ${C.contact.email?esc(C.contact.email):'[e-mail]'}
+
+Ja/My(*) niniejszym informuję/informujemy(*) o moim/naszym(*) odstąpieniu od umowy sprzedaży następujących rzeczy: ……………………
+Numer zamówienia: ……………
+Data zawarcia umowy / data odbioru(*): ……………
+Imię i nazwisko konsumenta(-ów): ……………
+Adres konsumenta(-ów): ……………
+Numer konta do zwrotu: ……………
+Data: ……………
+
+(*) Niepotrzebne skreślić.</div>`},
+  dostawa:{t:'Dostawa i płatność', h:()=>`
+    <h4>Dostawa</h4><ul>${C.shipping.map(s=>`<li>${esc(s.name)} — ${zl(s.price)}</li>`).join('')}</ul>${C.freeShippingFrom?`<p>Darmowa dostawa od ${zl(C.freeShippingFrom)}.</p>`:''}<p>Wysyłamy w ${esc(C.shippingDays)} od zaksięgowania wpłaty. Numer przesyłki dostaniesz mailem lub SMS-em od przewoźnika.</p>
+    <h4>Płatność</h4>${payMethods().length?`<ul>${payMethods().map(m=>`<li>${m.name}</li>`).join('')}</ul>`:'<p>Dane do płatności podajemy po złożeniu zamówienia.</p>'}<p>Po złożeniu zamówienia zobaczysz numer zamówienia i dane do wpłaty. Wpisz numer zamówienia w tytule. Zamówienie opłać w ciągu 3 dni.</p>
+    <h4>Rozmiary</h4><p>Krój jest oversize. Chcesz luźniej — bierz swój rozmiar. Bliżej ciała — o jeden mniej. Nie jesteś pewien? Napisz do nas.</p>`},
+  kontakt:{t:'Kontakt', h:()=>`
+    <h4>Napisz do nas</h4><p>E-mail: ${C.contact.email?`<a href="mailto:${esc(C.contact.email)}">${esc(C.contact.email)}</a>`:mail}</p>${C.contact.instagram?`<p>Instagram: <a href="https://instagram.com/${encodeURIComponent(C.contact.instagram)}" target="_blank" rel="noopener">@${esc(C.contact.instagram)}</a></p>`:''}
+    <h4>Sprzedawca</h4><p>${sellerLine}</p>
+    <p>Odpowiadamy zwykle w ciągu 24 godzin w dni robocze. W sprawie zamówienia podaj jego numer (G33-…).</p>`}
+};
+$('#sNav').innerHTML = Object.entries(DOCS).map(([k,v]) => `<a href="#${k}" data-doc="${k}">${v.t}</a>`).join('');
+function route(){
+  const k = location.hash.slice(1);
+  if (DOCS[k]){
+    $('#sTitle').textContent = DOCS[k].t; $('#sDoc').innerHTML = DOCS[k].h(); $('#sDoc').scrollTop = 0;
+    $$('#sNav a').forEach(a => a.dataset.doc===k ? a.setAttribute('aria-current','page') : a.removeAttribute('aria-current'));
+    openLayer($('#sheet'), true);
+  } else if ($('#sheet').classList.contains('on')) { closeTop(); }
+}
+addEventListener('hashchange', route);
+
+/* ---------- toast ---------- */
+let tt;
+function toast(t){ $('#toastTxt').textContent = t; $('#toast').classList.add('on'); clearTimeout(tt); tt = setTimeout(()=>$('#toast').classList.remove('on'), 4000); }
+
+/* ---------- events ---------- */
+function openCart(){ $('#toast').classList.remove('on'); if (view==='done' && lastOrder && lastOrder.sent) view='cart'; setView(view); openLayer($('#drawer')); }
+$('#basketBtn').onclick = openCart; $('#toastBtn').onclick = openCart;
+document.addEventListener('click', e => {
+  const t = e.target;
+  if (t.closest('.sheet .x')){ e.preventDefault(); closeTop(); return; }
+  if (t.closest('[data-close]') || t.id==='scrim'){ closeTop(); return; }
+  const pr = t.closest('[data-pid]'); if (pr){ openProduct(pr.dataset.pid); return; }
+  const sz = t.closest('[data-size]'); if (sz && !sz.disabled){ size = sz.dataset.size; $$('#pSizes .size').forEach(b => b.setAttribute('aria-pressed', b.dataset.size===size)); $('#pWarn').textContent=''; return; }
+  const dq = t.closest('[data-dq]'); if (dq){ const i = +dq.dataset.dq; cart[i].qty = Math.min(5, cart[i].qty + +dq.dataset.d); if (cart[i].qty<1) cart.splice(i,1); save(); render(); return; }
+  const rm = t.closest('[data-rm]'); if (rm){ cart.splice(+rm.dataset.rm,1); save(); render(); return; }
+  const go = t.closest('[data-go]'); if (go){ if (go.dataset.go==='checkout') buildCheckout(); setView(go.dataset.go); return; }
+  const cp = t.closest('[data-copy]'); if (cp){ copy(cp.dataset.copy, cp); return; }
+  if (t.closest('[data-copy-sum]')){ copy(lastOrder.summary, t.closest('[data-copy-sum]')); return; }
+});
+document.addEventListener('keydown', e => { if (e.key==='Escape') closeTop(); });
+
+/* page itself never moves: wheel anywhere on the stage scrolls only the clothes */
+const list = $('#products');
+if (C.products.length < 2) list.classList.add('single');
+$('.stage').addEventListener('wheel', e => {
+  if (e.target.closest('#products') || e.ctrlKey) return;
+  const k = e.deltaMode===1 ? 16 : e.deltaMode===2 ? list.clientHeight : 1;
+  list.scrollTop += e.deltaY * k; e.preventDefault();
+}, {passive:false});
+addEventListener('keydown', e => {
+  if ($('.modal.on,.drawer.on,.sheet.on') || /INPUT|TEXTAREA/.test(document.activeElement.tagName)) return;
+  const step = {ArrowDown:120, ArrowUp:-120, PageDown:list.clientHeight*.85, PageUp:-list.clientHeight*.85, ' ':list.clientHeight*.85}[e.key];
+  if (step){ list.scrollBy({top: e.shiftKey && e.key===' ' ? -step : step, behavior:'smooth'}); e.preventDefault(); }
+});
+
+render(); route();
+})();
+</script>
+</body>
+</html>
