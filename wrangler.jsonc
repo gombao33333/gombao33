@@ -1,0 +1,8 @@
+{
+  // Ustawienia dla Cloudflare: strona "gombao" = pliki z folderu ponizej
+  "name": "gombao",
+  "compatibility_date": "2026-11-18",
+  "assets": {
+    "directory": "./gombao33 - na github"
+  }
+}
